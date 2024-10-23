@@ -1,0 +1,10 @@
+#dialog-new-project {
+    background-color: black;
+    border: solid 2px;
+    width: 500px;
+    height: 500px;
+}
+
+.close-dialog {
+    background-color: blue;
+}
