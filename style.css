@@ -120,6 +120,10 @@ input:checked + .slider::before {
     color: #cccd;;
 }
 
+#client-id, .last-label {
+    display: none;
+}
+
 .dialog__buttons {
     margin-top: 10px;
     text-align: center;
