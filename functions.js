@@ -1,6 +1,9 @@
 //dialog
 const modal_new_project = document.getElementById('modal-new-project');
 
+//icon
+const icon_question = document.querySelector('.icon-question');
+
 //sections
 const section_one = document.getElementById('section-one');
 const section_two = document.getElementById('section-two');
@@ -54,12 +57,14 @@ const label_client_id = document.querySelector('.last-label')
 //labels and inputs users
 const information_label_inputs = document.querySelectorAll('.label__first-modal');
 const information_input_users = document.querySelectorAll('.first-modal__input')
+const container_last_label = document.querySelector('.container-last-label');
 
 
 
 
 switch_check.addEventListener('change', () => {
     if (switch_check.checked) {
+        container_last_label.style.display = 'block';
         information_label_inputs.forEach(label => {
             label.style.display = 'none';
         })
@@ -67,8 +72,9 @@ switch_check.addEventListener('change', () => {
             input.style.display = 'none';
         })
         client_id.style.display = 'inline';
-        label_client_id.style.display = 'inline'
+        label_client_id.style.display = 'inline-block'
     } else {
+        container_last_label.style.display = 'none';
         information_label_inputs.forEach(label => {
             label.style.display = 'inline';
         })

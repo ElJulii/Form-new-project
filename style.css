@@ -133,10 +133,35 @@ input:checked + .slider::before {
     color: #bbbbbb;
 }
 
-#client-id, .last-label {
+#client-id, .container-last-label {
     display: none;
 }
+
+.icon-question {
+    margin-left: 5px;
+    display: inline-block;
+    border: solid 2px #0076F5;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    color: #0076F5;
+    text-align: center;
+    cursor: pointer;
+}
 /*section 2*/
+#project-type {
+    height: auto;
+    overflow-y: scroll;
+}
+
+option {
+    height: 50px;
+}
+
+#project-type[size] {
+    size: 5; /* Muestra 5 opciones visibles */
+}
+
 #section-two {
     display: none;
 }
