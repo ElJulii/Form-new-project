@@ -1,6 +1,12 @@
 body {
     font-family: PT Root UI, sans-serif;
 }
+.modal__title, .second_tittle__modal {
+    color: #404040;
+}
+.second_tittle__modal {
+    font-size: 1em;
+}
 /*first dialog new project*/
 #modal-new-project {
     position: fixed;
@@ -14,13 +20,12 @@ body {
 .container-from__modal-new-project {
     position: relative;
     background-color: #fff;
-    border: solid 2px;
     border-radius: 20px;
     max-width: 450px;
     height: auto;
     padding: 40px 25px 20px 25px;
     box-sizing: border-box;
-    margin: auto;
+    margin: 2% auto;
 }
 
 .modal__warning-section {
@@ -124,14 +129,15 @@ input:checked + .slider::before {
 .first-modal__input {
     padding: 10px;
     box-sizing: border-box;
-    border: solid 1px #ddd;
+    border: solid 1px #E5E5EA;
     border-radius: 5px;
     margin-bottom: 12px;
 }
 
-.first-modal__input::placeholder {
-    color: #bbbbbb;
+.first-modal__input::placeholder, select {
+    color: #BBBBBB;
 }
+
 
 #client-id, .container-last-label {
     display: none;
@@ -149,16 +155,6 @@ input:checked + .slider::before {
     cursor: pointer;
 }
 /*section 2*/
-#project-type {
-    height: auto;
-    overflow-y: scroll;
-}
-
-option {
-    height: 50px;
-}
-
-
 
 #section-two {
     display: none;
@@ -207,7 +203,7 @@ option {
 }
 
 .dropdown-option:hover {
-    background-color: #f0f0f0;
+    background-color: #F2F8FE;
 }
 
 #newFolderInputContainer {
@@ -230,7 +226,10 @@ input {
     font-size: 0.7em;
 }
 
-
+#selectedText {
+    font-size: 0.8em;
+    color: #ccc;;
+}
 
 /* Section 3 */
 #section-three {
@@ -253,8 +252,6 @@ input {
     text-align: center;
     margin-right: 10px;
 }
-
-/*section 2 required*/
 
 
 

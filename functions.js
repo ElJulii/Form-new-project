@@ -11,7 +11,8 @@ const section_three = document.getElementById('section-three');
 
 //inputs
 const input_title_project = document.getElementById('tittle-project');
-const select_project = document.getElementById('projectDropdown')
+const select_project = document.getElementById('projectDropdown');
+const switch_check = document.getElementById('switch-check');
 //warning
 const incomplete_message = document.querySelectorAll('.incomplete-text');
 //кнопка открыть форму
@@ -28,6 +29,9 @@ const button_delete_project = document.querySelector('.button-delete__modal-butt
 button_connect.addEventListener('click', () => {
     section_one.style.display = 'none';
     section_two.style.display = 'inline';
+
+    select_project.style.display = 'inline';
+    input_title_project.style.display = 'inline';
 
     button_save.style.display = 'block'
     button_connect.style.display = 'none';
@@ -81,6 +85,7 @@ button_save.addEventListener('click', (e) => {
 
 button_done.addEventListener('click', () => {
     container_tasks.innerHTML = `<p>${name_project} </p>`
+    restartForm();
 })
 
 button_cancel.addEventListener('click', () => {
@@ -88,6 +93,10 @@ button_cancel.addEventListener('click', () => {
 })
 
 button_delete_project.addEventListener('click', () => {
+    restartForm()
+})
+
+function restartForm() {
     name_project = '';
     section_one.style.display = 'block';
     section_two.style.display = 'none';
@@ -97,10 +106,7 @@ button_delete_project.addEventListener('click', () => {
     button_cancel.style.display = 'block';
     button_done.style.display = 'none';
     button_delete_project.style.display = 'none';
-})
-//inputs
-const switch_check = document.getElementById('switch-check');
-
+}
 //client ID
 const client_id = document.getElementById('client-id');
 const label_client_id = document.querySelector('.last-label')
