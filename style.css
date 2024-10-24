@@ -7,6 +7,11 @@ body {
 .second_tittle__modal {
     font-size: 1em;
 }
+#button-new-project {
+    color: white;
+    background-color: slateblue;
+    box-shadow: 5px 5px 20px black;
+}
 /*first dialog new project*/
 #modal-new-project {
     position: fixed;
@@ -295,6 +300,7 @@ input {
 button {
     padding: 7px 15px;
     cursor: pointer;
+    font-weight: bold;
 }
 /*Exit modal*/
 .modal__form-close {
@@ -309,6 +315,6 @@ button {
     border: none;
     color: #aaa;
     font-size: 1.2em;
-    cursor: pointer;
+    box-shadow: none;
 }
 
