@@ -158,9 +158,7 @@ option {
     height: 50px;
 }
 
-#project-type[size] {
-    size: 5; /* Muestra 5 opciones visibles */
-}
+
 
 #section-two {
     display: none;
@@ -225,6 +223,16 @@ input {
     border-radius: 4px;
 }
 
+.incomplete-text {
+    display: none;
+    margin-top: 0;
+    color: red;
+    font-size: 0.7em;
+}
+
+#projectDropdown, #tittle-project {
+    margin-bottom: 0;
+}
 
 
 /* Section 3 */
@@ -240,14 +248,18 @@ input {
     box-sizing: border-box;
 }
 .check-icon__section-three {
-    border: solid #009906;
+    border: solid 1px #009906;
     color: #009906;;
     width: 5%;
     border-radius: 50%;
     text-align: center;
 }
 
+/*section 2 required*/
 
+
+
+/*? icon*/
 .check-icon__section-three, .final-message__section-three {
     display: inline-block;
 }

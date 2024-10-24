@@ -1,14 +1,19 @@
+//name project
+let name_project;
+const container_tasks = document.querySelector('.projects-container');
 //dialog
 const modal_new_project = document.getElementById('modal-new-project');
-
-//icon
-const icon_question = document.querySelector('.icon-question');
 
 //sections
 const section_one = document.getElementById('section-one');
 const section_two = document.getElementById('section-two');
 const section_three = document.getElementById('section-three');
 
+//inputs
+const input_title_project = document.getElementById('tittle-project');
+const select_project = document.getElementById('projectDropdown')
+//warning
+const incomplete_message = document.querySelectorAll('.incomplete-text');
 //кнопка открыть форму
 const button_new_project = document.getElementById('button-new-project');
 button_new_project.addEventListener('click', () => {
@@ -27,25 +32,59 @@ button_connect.addEventListener('click', () => {
     button_save.style.display = 'block'
     button_connect.style.display = 'none';
 })
+select_project.addEventListener('change', (e) => {
+    e.preventDefault();
+    let value_select_project = select_project.value;
+    if (value_select_project !== '') {
+        select_project.style.border = 'solid 1px #ddd';
+        incomplete_message[0].style.display = 'none';
+    }
+})
+input_title_project.addEventListener('change', (e) => {
+    e.preventDefault();
+    let value_title_project = input_title_project.value;
+    if (value_title_project !== '') {
+        input_title_project.style.border = 'solid 1px #ddd';
+        incomplete_message[1].style.display = 'none';
+    }
+})
 
-button_save.addEventListener('click', () => {
-    button_save.style.display = 'none';
-    button_cancel.style.display = 'none';
-    button_done.style.display = 'block';
-    button_delete_project.display = 'block';
+button_save.addEventListener('click', (e) => {
+    e.preventDefault();
+    let value_title_project = input_title_project.value;
+    let value_select_project = select_project.value;
+    if (value_title_project === '') {
+        input_title_project.style.border = 'solid 1px red';
+        incomplete_message[1].style.display = 'inline';
+    } else if (value_select_project === '') {
+        select_project.style.border = 'solid 1px red';
+        incomplete_message[0].style.display = 'inline';
+    } else {
+        button_save.style.display = 'none';
+        button_cancel.style.display = 'none';
+        button_done.style.display = 'block';
+        button_delete_project.display = 'block';
 
-    section_two.style.display = 'none';
-    section_three.style.display = 'block';
+        section_two.style.display = 'none';
+        section_three.style.display = 'block';
 
-    button_delete_project.style.display = 'block'
+        button_delete_project.style.display = 'block'
+
+        name_project = value_title_project;
+    }
 
 })
+
+button_done.addEventListener('click', () => {
+    container_tasks.innerHTML = `<p>${name_project} </p>`
+})
+
 button_cancel.addEventListener('click', () => {
     modal_new_project.setAttribute('open', 'false')
 })
 
 button_delete_project.addEventListener('click', () => {
-
+    name_project = '';
 })
 //inputs
 const switch_check = document.getElementById('switch-check');

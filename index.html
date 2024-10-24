@@ -10,11 +10,12 @@
 </head>
 <body>
 <button id="button-new-project">Новый проект</button>
+<div class="projects-container"></div>
 <dialog id="modal-new-project" open>
     <div class="container-from__modal-new-project">
         <h2 class="modal__title">Создание нового проекта</h2>
 <!-- register-->
-        <section id="section-one" style="display: none">
+        <section id="section-one">
             <div class="modal__information">
                 <h3>Подключите проект через Я.вебмастер</h3>
                 <div class="modal__warning-section">
@@ -56,22 +57,25 @@
 <!--Save a project-->
         <section id="section-two" >
             <form class="first-modal__form" id="second-form">
-                <label for="project-type">Проект для подключения</label>
-
-                <select name="" id="project-type" class="first-modal__input">
-                    <option value="">Проект 1</option>
-                    <option value="">Проект 2</option>
-                    <option value="">Проект 3</option>
-                    <option value="">Проект 4</option>
-                    <option value="">Проект 5</option>
-                    <option value="">Проект 6</option>
-                    <option value="">Проект 7</option>
-                    <option value="">Проект 8</option>
-                    <option value="">Проект 9</option>
+                <label for="projectDropdown">Проект для подключения</label>
+                <select id="projectDropdown" class="first-modal__input">
+                    <option value="" disabled selected hidden>Выверите проект из списка</option>
+                    <option value="project 1">Проект 1</option>
+                    <option value="project 2">Проект 2</option>
+                    <option value="project 3">Проект 3</option>
+                    <option value="project 4">Проект 4</option>
+                    <option value="project 5">Проект 5</option>
+                    <option value="project 6">Проект 6</option>
+                    <option value="project 7">Проект 7</option>
+                    <option value="project 8">Проект 8</option>
+                    <option value="project 9">Проект 9</option>
+                    <option value="project 10">Проект 10</option>
                 </select>
+                <p class="incomplete-text">Необходимо подключить проект</p>
 
                 <label for="tittle-project">Название проект</label>
                 <input id="tittle-project" class="first-modal__input" type="text" placeholder="Введите название проекта">
+                <p class="incomplete-text">Необходимо указать название проекта</p>
 
 
                 <label for="dropdown">Папка проект</label>
@@ -123,7 +127,10 @@
             <form method="dialog">
                 <button class="modal__buttons__cancel">Отметить</button>
             </form>
-            <button class="button-delete__modal-buttons">Отключить</button>
+            <form method="dialog">
+                <button class="button-delete__modal-buttons">Отключить</button>
+            </form>
+
         </div>
         <form class="modal__form-close" method="dialog">
             <button class="close-modal">X</button>
