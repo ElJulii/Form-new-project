@@ -218,5 +218,6 @@ function restartForm() {
     button_cancel.style.display = 'block';
     button_done.style.display = 'none';
     button_delete_project.style.display = 'none';
+    button_save.style.display = 'none';
 }
 
