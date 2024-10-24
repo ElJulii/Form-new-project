@@ -38,6 +38,7 @@ select_project.addEventListener('change', (e) => {
     if (value_select_project !== '') {
         select_project.style.border = 'solid 1px #ddd';
         incomplete_message[0].style.display = 'none';
+        select_project.style.marginBottom = '0';
     }
 })
 input_title_project.addEventListener('change', (e) => {
@@ -46,6 +47,7 @@ input_title_project.addEventListener('change', (e) => {
     if (value_title_project !== '') {
         input_title_project.style.border = 'solid 1px #ddd';
         incomplete_message[1].style.display = 'none';
+        input_title_project.style.marginBottom = '12px';
     }
 })
 
@@ -56,9 +58,11 @@ button_save.addEventListener('click', (e) => {
     if (value_title_project === '') {
         input_title_project.style.border = 'solid 1px red';
         incomplete_message[1].style.display = 'inline';
+        input_title_project.style.marginBottom = '0';
     } else if (value_select_project === '') {
         select_project.style.border = 'solid 1px red';
         incomplete_message[0].style.display = 'inline';
+        select_project.style.marginBottom = '0';
     } else {
         button_save.style.display = 'none';
         button_cancel.style.display = 'none';
@@ -85,6 +89,14 @@ button_cancel.addEventListener('click', () => {
 
 button_delete_project.addEventListener('click', () => {
     name_project = '';
+    section_one.style.display = 'block';
+    section_two.style.display = 'none';
+    section_three.style.display = 'none';
+
+    button_connect.style.display = 'block';
+    button_cancel.style.display = 'block';
+    button_done.style.display = 'none';
+    button_delete_project.style.display = 'none';
 })
 //inputs
 const switch_check = document.getElementById('switch-check');

@@ -230,9 +230,6 @@ input {
     font-size: 0.7em;
 }
 
-#projectDropdown, #tittle-project {
-    margin-bottom: 0;
-}
 
 
 /* Section 3 */
@@ -248,11 +245,13 @@ input {
     box-sizing: border-box;
 }
 .check-icon__section-three {
-    border: solid 1px #009906;
-    color: #009906;;
+    border: solid 2px #009906;
+    color: #009906;
+    font-weight: bold;
     width: 5%;
     border-radius: 50%;
     text-align: center;
+    margin-right: 10px;
 }
 
 /*section 2 required*/
