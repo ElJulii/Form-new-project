@@ -1,5 +1,5 @@
 //dialog
-const model_new_project = document.getElementById('modal-new-project');
+const modal_new_project = document.getElementById('modal-new-project');
 
 //sections
 const section_one = document.getElementById('section-one');
@@ -8,14 +8,24 @@ const section_two = document.getElementById('section-two');
 //кнопка открыть форму
 const button_new_project = document.getElementById('button-new-project');
 button_new_project.addEventListener('click', () => {
-    model_new_project.setAttribute('open', 'true');
+    modal_new_project.setAttribute('open', 'true');
 })
 
+const button_save = document.querySelector('.modal__buttons__save');
 const button_connect = document.querySelector('.modal__buttons__connect');
 button_connect.addEventListener('click', () => {
     section_one.style.display = 'none';
     section_two.style.display = 'block';
+
+    button_save.style.display = 'block'
+    button_connect.style.display = 'none';
 })
+
+const button_cancel = document.querySelector('.modal__buttons__cancel');
+// button_cancel.addEventListener('click', () => {
+//     modal_new_project.setAttribute('open', 'false')
+//
+// })
 
 //inputs
 const switch_check = document.getElementById('switch-check');

@@ -114,18 +114,19 @@ input:checked + .slider::before {
 .first-modal__form {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
-.label__first-modal {
-    margin: 15px 0 7px 0;
-}
+
 .label-one {
     margin-top: 20px;
 }
+
 .first-modal__input {
     padding: 10px;
     box-sizing: border-box;
     border: solid 1px #ddd;
     border-radius: 5px;
+    margin-bottom: 12px;
 }
 
 .first-modal__input::placeholder {
