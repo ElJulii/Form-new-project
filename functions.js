@@ -13,12 +13,21 @@ button_new_project.addEventListener('click', () => {
 
 const button_save = document.querySelector('.modal__buttons__save');
 const button_connect = document.querySelector('.modal__buttons__connect');
+const button_done = document.querySelector('.modal__buttons__end');
+const button_delete_project = document.querySelector('.button-delete__modal-buttons')
 button_connect.addEventListener('click', () => {
     section_one.style.display = 'none';
     section_two.style.display = 'block';
 
     button_save.style.display = 'block'
     button_connect.style.display = 'none';
+})
+
+button_save.addEventListener('click', () => {
+    button_save.style.display = 'none';
+    button_cancel.style.display = 'none';
+    button_done.style.display = 'block';
+    button_delete_project.display = 'block';
 })
 
 const button_cancel = document.querySelector('.modal__buttons__cancel');

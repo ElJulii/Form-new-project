@@ -14,7 +14,7 @@
     <div class="container-from__modal-new-project">
         <h2 class="modal__title">Создание нового проекта</h2>
 <!-- register-->
-        <section id="section-one" style="display:none;">
+        <section id="section-one" style="display: none">
             <div class="modal__information">
                 <h3>Подключите проект через Я.вебмастер</h3>
                 <div class="modal__warning-section">
@@ -51,8 +51,8 @@
             </form>
         </section>
 <!--Save a project-->
-        <section id="section-two">
-            <form class="first-modal__form">
+        <section id="section-two" >
+            <form class="first-modal__form" id="second-form">
                 <label for="project-type">Проект для подключения</label>
                 <select name="" id="project-type" class="first-modal__input" required>
                     <option value="">Проект 1</option>
@@ -69,9 +69,9 @@
                 <label for="tittle-project">Название проект</label>
                 <input id="tittle-project" class="first-modal__input" type="text" placeholder="Введите название проекта" required>
 
-                <label for="select-option">Папка проект</label>
 
-                <select name="" id="select-option" class="first-modal__input">
+                <label for="folderSelect">Папка проект</label>
+                <select name="" id="folderSelect" class="first-modal__input">
                     <option value="">Папка 1</option>
                     <option value="">Папка 2</option>
                     <option value="">Папка 3</option>
@@ -82,20 +82,22 @@
                     <option value="">Папка 8</option>
                     <option value="">Папка 9</option>
                     <option value="">Папка 10</option>
+                    <option value="addNew">+ Agregar nueva carpeta</option>
                 </select>
+
             </form>
         </section>
 <!--Everything done section-->
         <section id="section-three" style="display:none;">
-            <div>
-                <div>&#10003;</div>
-                <p>Проект успешна подключить</p>
+            <div class="check-icon__section-three">
+                &#10003;
             </div>
+            <p class="final-message__section-three">Проект успешна подключить</p>
         </section>
 
         <div class="modal__buttons">
             <button class="button-next__modal__buttons modal__buttons__connect">Подключить</button>
-            <button class="button-next__modal__buttons modal__buttons__save">Сохранить</button>
+            <button class="button-next__modal__buttons modal__buttons__save" form="second-form">Сохранить</button>
             <button class="button-next__modal__buttons modal__buttons__end">Завершить</button>
             <button class="modal__buttons__cancel">Отметить</button>
             <button class="button-delete__modal-buttons">Отключить</button>
