@@ -10,52 +10,85 @@
 </head>
 <body>
 <button id="button-new-project">Новый проект</button>
-<dialog id="dialog-new-project" open>
-    <h2 class="dialog__title">Создание нового проекта</h2>
-    <div class="dialog__information">
-        <h3>Подключите проект через Я.вебмастер</h3>
-        <div class="dialog__warning-section">
-            <div class="dialog__warning__icon">!</div>
-            <div class="dialog__warning__message">
-                <p>Убедитесь, что вы авторизованы
-                    в <a class="link" target="_blank" href="#">
-                        аккаунте Яндекс </a>
-                    и у вас создано приложение.
-                    Подробная
-                    <a class="link" href="#" target="_blank">видео-инструкция</a> по созданию приложения. </p>
+<dialog id="model-new-project" open>
+    <div class="container-from__model-new-project">
+        <h2 class="model__title">Создание нового проекта</h2>
+        <div class="model__information">
+            <h3>Подключите проект через Я.вебмастер</h3>
+            <div class="model__warning-section">
+                <div class="model__warning__icon">!</div>
+                <div class="model__warning__message">
+                    <p>Убедитесь, что вы авторизованы
+                        в <a class="link" target="_blank" href="#">
+                            аккаунте Яндекс </a>
+                        и у вас создано приложение.
+                        Подробная
+                        <a class="link" href="#" target="_blank">видео-инструкция</a> по созданию приложения. </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="switch-container">
-        <span class="switch-label">Автоматически</span>
-        <label class="switch">
-            <input id="switch-check" type="checkbox">
-            <span class="slider"></span>
-        </label>
-    </div>
-
-    <form class="first-dialog__form">
-        <label class="label__first-dialog label-one" for="access-token">Access token</label>
-        <input class="first-dialog__input" id="access-token" type="text" placeholder="Введите данные из Я.Вебмастера">
-
-        <label class="label__first-dialog" for="user-id">User ID</label>
-        <input class="first-dialog__input" id="user-id" type="text" placeholder="Введите данные из Я.Вебмастера">
-
-        <label class="label__first-dialog" for="host-id">Host ID</label>
-        <input class="first-dialog__input" id="host-id" type="text" placeholder="Введите данные из Я.Вебмастера">
-
-        <label class="label__first-dialog last-label" for="client-id">Client ID</label>
-        <input class="first-dialog__input" id="client-id" type="text" placeholder="Введите данные из Я.Вебмастера">
-
-        <div class="dialog__buttons">
-            <button class="dialog__buttons__connect">Подключить</button>
-            <button class="dialog__buttons__cancel">Отметить</button>
+        <div class="switch-container">
+            <span class="switch-label">Автоматически</span>
+            <label class="switch">
+                <input id="switch-check" type="checkbox">
+                <span class="slider"></span>
+            </label>
         </div>
-    </form>
-    <form class="dialog__form-close" method="dialog">
-        <button class="close-dialog">X</button>
-    </form>
+
+        <form class="first-model__form">
+            <label class="label__first-model label-one" for="access-token">Access token</label>
+            <input class="first-model__input" id="access-token" type="text" placeholder="Введите данные из Я.Вебмастера">
+
+            <label class="label__first-model" for="user-id">User ID</label>
+            <input class="first-model__input" id="user-id" type="text" placeholder="Введите данные из Я.Вебмастера">
+
+            <label class="label__first-model" for="host-id">Host ID</label>
+            <input class="first-model__input" id="host-id" type="text" placeholder="Введите данные из Я.Вебмастера">
+
+            <label class="label__first-model last-label" for="client-id">Client ID</label>
+            <input class="first-model__input" id="client-id" type="text" placeholder="Введите данные из Я.Вебмастера">
+
+            <div class="model__buttons">
+                <button class="model__buttons__connect">Подключить</button>
+                <button class="model__buttons__cancel">Отметить</button>
+            </div>
+        </form>
+        <form class="model__form-close" method="dialog">
+            <button class="close-model">X</button>
+        </form>
+    </div>
 </dialog>
 <script src="functions.js"></script>
 </body>
 </html>
+
+
+<!--<section id="section-two">-->
+<!--    <form class="first-modal__form">-->
+<!--        <label for="project-type">Проект для подключения</label>-->
+<!--        <select name="" id="project-type">-->
+<!--            <option value="">Проект 1</option>-->
+<!--            <option value="">Проект 2</option>-->
+<!--            <option value="">Проект 3</option>-->
+<!--            <option value="">Проект 4</option>-->
+<!--            <option value="">Проект 5</option>-->
+<!--        </select>-->
+
+<!--        <label for="tittle-project">Название проект</label>-->
+<!--        <input id="tittle-project" type="text" placeholder="Введите название проекта">-->
+
+<!--        <label for="select-option">Папка проект</label>-->
+<!--        <select name="" id="select-option">-->
+<!--            <option value="">Папка 1</option>-->
+<!--            <option value="">Папка 2</option>-->
+<!--            <option value="">Папка 3</option>-->
+<!--            <option value="">Папка 4</option>-->
+<!--            <option value="">Папка 5</option>-->
+<!--            <option value="">Папка 6</option>-->
+<!--            <option value="">Папка 7</option>-->
+<!--            <option value="">Папка 8</option>-->
+<!--            <option value="">Папка 9</option>-->
+<!--            <option value="">Папка 10</option>-->
+<!--        </select>-->
+<!--    </form>-->
+<!--</section>-->

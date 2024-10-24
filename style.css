@@ -2,16 +2,28 @@ body {
     font-family: Arial, "Sans Serif Collection", serif;
 }
 /*first dialog new project*/
-#dialog-new-project {
+#model-new-project {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.container-from__model-new-project {
+    position: relative;
     background-color: #fff;
     border: solid 2px;
     border-radius: 20px;
     max-width: 450px;
     padding: 40px 25px 20px 25px;
     box-sizing: border-box;
+    margin: auto;
+
 }
 
-.dialog__warning-section {
+.model__warning-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +34,7 @@ body {
     gap: 10px;
     position: relative;
 }
-.dialog__warning__icon {
+.model__warning__icon {
     border: solid 2px #008fff;
     border-radius: 50%;
     width: 13%;
@@ -30,11 +42,11 @@ body {
     color: blue;
 }
 
-.dialog__warning__icon, .link {
+.model__warning__icon, .link {
     color: #008fff;
 }
 
-.dialog__warning__message {
+.model__warning__message {
     font-size: 14px;
 }
 
@@ -99,24 +111,24 @@ input:checked + .slider::before {
 
 /*Form first dialog*/
 
-.first-dialog__form {
+.first-model__form {
     display: flex;
     flex-direction: column;
 }
-.label__first-dialog {
+.label__first-model {
     margin: 15px 0 7px 0;
 }
 .label-one {
     margin-top: 20px;
 }
-.first-dialog__input {
+.first-model__input {
     padding: 10px;
     box-sizing: border-box;
     border: solid 1px #ddd;
     border-radius: 5px;
 }
 
-.first-dialog__input::placeholder {
+.first-model__input::placeholder {
     color: #cccd;;
 }
 
@@ -124,42 +136,42 @@ input:checked + .slider::before {
     display: none;
 }
 
-.dialog__buttons {
+.model__buttons {
     margin-top: 10px;
     text-align: center;
 }
 
-.dialog__form-close {
+.model__form-close {
     position: absolute;
     right: 8%;
     top: 3%;
 }
 
-.dialog__buttons {
+.model__buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10%;
     margin-top: 25px;
 }
-.dialog__buttons__connect {
+.model__buttons__connect {
     color: white;
     background-color: #006fff;
     border: solid transparent;
     border-radius: 5px;
 }
 
-.dialog__buttons__cancel {
+.model__buttons__cancel {
     color: #006fff;
     border: none;
     background-color: transparent;
 }
 
-.dialog__buttons__cancel, .dialog__buttons__connect {
+.model__buttons__cancel, .model__buttons__connect {
     padding: 7px 15px;
     cursor: pointer;
 }
-.close-dialog {
+.close-model {
     font-family: cursive;
     background-color: transparent;
     border: none;
