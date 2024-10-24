@@ -161,7 +161,7 @@ input:checked + .slider::before {
     border-radius: 5px;
 }
 
-.modal__buttons__save, .modal__buttons__end  {
+.modal__buttons__save, .modal__buttons__end, .button-delete__modal-buttons  {
     display: none;
 }
 

@@ -14,7 +14,7 @@
     <div class="container-from__modal-new-project">
         <h2 class="modal__title">Создание нового проекта</h2>
 <!-- register-->
-        <section id="section-one">
+        <section id="section-one" style="display:none;">
             <div class="modal__information">
                 <h3>Подключите проект через Я.вебмастер</h3>
                 <div class="modal__warning-section">
@@ -80,13 +80,20 @@
                 </select>
             </form>
         </section>
-
+<!--Everything done section-->
+        <section id="section-three" style="display:none;">
+            <div>
+                <div>&#10003;</div>
+                <p>Проект успешна подключить</p>
+            </div>
+        </section>
 
         <div class="modal__buttons">
             <button class="button-next__modal__buttons modal__buttons__connect">Подключить</button>
             <button class="button-next__modal__buttons modal__buttons__save">Сохранить</button>
             <button class="button-next__modal__buttons modal__buttons__end">Завершить</button>
             <button class="modal__buttons__cancel">Отметить</button>
+            <button class="button-delete__modal-buttons">Отключить</button>
         </div>
         <form class="modal__form-close" method="dialog">
             <button class="close-modal">X</button>
