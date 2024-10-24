@@ -2,7 +2,7 @@ body {
     font-family: Arial, "Sans Serif Collection", serif;
 }
 /*first dialog new project*/
-#model-new-project {
+#modal-new-project {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -11,19 +11,19 @@ body {
     left: 0;
 }
 
-.container-from__model-new-project {
+.container-from__modal-new-project {
     position: relative;
     background-color: #fff;
     border: solid 2px;
     border-radius: 20px;
     max-width: 450px;
+    height: auto;
     padding: 40px 25px 20px 25px;
     box-sizing: border-box;
     margin: auto;
-
 }
 
-.model__warning-section {
+.modal__warning-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body {
     gap: 10px;
     position: relative;
 }
-.model__warning__icon {
+.modal__warning__icon {
     border: solid 2px #008fff;
     border-radius: 50%;
     width: 13%;
@@ -42,11 +42,11 @@ body {
     color: blue;
 }
 
-.model__warning__icon, .link {
+.modal__warning__icon, .link {
     color: #008fff;
 }
 
-.model__warning__message {
+.modal__warning__message {
     font-size: 14px;
 }
 
@@ -111,24 +111,24 @@ input:checked + .slider::before {
 
 /*Form first dialog*/
 
-.first-model__form {
+.first-modal__form {
     display: flex;
     flex-direction: column;
 }
-.label__first-model {
+.label__first-modal {
     margin: 15px 0 7px 0;
 }
 .label-one {
     margin-top: 20px;
 }
-.first-model__input {
+.first-modal__input {
     padding: 10px;
     box-sizing: border-box;
     border: solid 1px #ddd;
     border-radius: 5px;
 }
 
-.first-model__input::placeholder {
+.first-modal__input::placeholder {
     color: #cccd;;
 }
 
@@ -136,42 +136,46 @@ input:checked + .slider::before {
     display: none;
 }
 
-.model__buttons {
+.modal__buttons {
     margin-top: 10px;
     text-align: center;
 }
 
-.model__form-close {
+.modal__form-close {
     position: absolute;
     right: 8%;
     top: 3%;
 }
 
-.model__buttons {
+.modal__buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10%;
     margin-top: 25px;
 }
-.model__buttons__connect {
+.button-next__modal__buttons {
     color: white;
     background-color: #006fff;
     border: solid transparent;
     border-radius: 5px;
 }
 
-.model__buttons__cancel {
+.modal__buttons__save, .modal__buttons__end  {
+    display: none;
+}
+
+.modal__buttons__cancel {
     color: #006fff;
     border: none;
     background-color: transparent;
 }
 
-.model__buttons__cancel, .model__buttons__connect {
+.modal__buttons__cancel, .button-next__modal__buttons {
     padding: 7px 15px;
     cursor: pointer;
 }
-.close-model {
+.close-modal {
     font-family: cursive;
     background-color: transparent;
     border: none;

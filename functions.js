@@ -1,8 +1,21 @@
+//dialog
+const model_new_project = document.getElementById('modal-new-project');
+
+//sections
+const section_one = document.getElementById('section-one');
+const section_two = document.getElementById('section-two');
+
 //кнопка открыть форму
 const button_new_project = document.getElementById('button-new-project');
+button_new_project.addEventListener('click', () => {
+    model_new_project.setAttribute('open', 'true');
+})
 
-//dialog
-const model_new_project = document.getElementById('model-new-project');
+const button_connect = document.querySelector('.modal__buttons__connect');
+button_connect.addEventListener('click', () => {
+    section_one.style.display = 'none';
+    section_two.style.display = 'block';
+})
 
 //inputs
 const switch_check = document.getElementById('switch-check');
@@ -12,13 +25,11 @@ const client_id = document.getElementById('client-id');
 const label_client_id = document.querySelector('.last-label')
 
 //labels and inputs users
-const information_label_inputs = document.querySelectorAll('.label__first-model');
-const information_input_users = document.querySelectorAll('.first-model__input')
+const information_label_inputs = document.querySelectorAll('.label__first-modal');
+const information_input_users = document.querySelectorAll('.first-modal__input')
 
 
-button_new_project.addEventListener('click', () => {
-    model_new_project.setAttribute('open', 'true');
-})
+
 
 switch_check.addEventListener('change', () => {
     if (switch_check.checked) {
@@ -41,3 +52,4 @@ switch_check.addEventListener('change', () => {
         label_client_id.style.display = 'none'
     }
 })
+
