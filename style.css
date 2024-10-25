@@ -238,11 +238,9 @@ input {
 }
 
 /* Section 3 */
-#section-three {
-    display: none;
-}
 
 #section-three {
+    display: none;
     background-color: #f2f4f3;
     border-radius: 10px;
     border: solid transparent;
@@ -358,5 +356,12 @@ button {
 
     .modal__warning__icon {
         width: 30%;
+    }
+    #section-three {
+        text-align: center;
+    }
+    .check-icon__section-three {
+        margin-top: 10px;
+        width: 10%;
     }
 }
