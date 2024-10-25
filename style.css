@@ -9,6 +9,7 @@ body {
 }
 #button-new-project {
     color: white;
+    border: solid 1px slateblue;
     background-color: slateblue;
     box-shadow: 5px 5px 20px black;
 }
@@ -30,7 +31,7 @@ body {
     height: auto;
     padding: 40px 25px 20px 25px;
     box-sizing: border-box;
-    margin: 2% auto;
+    margin: auto;
 }
 
 .modal__warning-section {
@@ -266,6 +267,20 @@ input {
 }
 /*Buttons*/
 
+button {
+    padding: 7px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal__buttons__connect:hover,
+.modal__buttons__save:hover,
+.modal__buttons__end:hover{
+    background-color: #ffffff;
+    border: solid #006fff 1px;
+    color: #006fff;
+}
+
 .modal__buttons {
     display: flex;
     align-items: center;
@@ -277,7 +292,7 @@ input {
 .button-next__modal__buttons {
     color: white;
     background-color: #0076f5;
-    border: solid transparent;
+    border: solid transparent 1px;
     border-radius: 5px;
 }
 
@@ -287,20 +302,29 @@ input {
 
 .modal__buttons__cancel {
     color: #006fff;
-    border: none;
+    border: solid transparent 1px;
     background-color: transparent;
 }
 
 .button-delete__modal-buttons {
     color: red;
     background-color: transparent;
-    border: transparent;
+    border: solid transparent 1px;
 }
 
-button {
-    padding: 7px 15px;
-    cursor: pointer;
-    font-weight: bold;
+#button-new-project:hover {
+    border: solid 1px slateblue;
+    background-color: white;
+    color: slateblue;
+}
+
+.button-delete__modal-buttons:hover,
+.modal__buttons__cancel:hover {
+    text-decoration: underline 2px;
+}
+
+.close-modal:hover {
+    color: black;
 }
 /*Exit modal*/
 .modal__form-close {
@@ -318,3 +342,21 @@ button {
     box-shadow: none;
 }
 
+@media screen and (max-width: 400px) {
+    .container-from__modal-new-project {
+        max-width: 80%;
+        right: 10px;
+    }
+
+    .modal__information, .modal__title {
+        text-align: center;
+    }
+    .modal__warning__message {
+        font-size: 0.8em;
+        text-align: left;
+    }
+
+    .modal__warning__icon {
+        width: 30%;
+    }
+}
